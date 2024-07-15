@@ -1,0 +1,188 @@
+.menu-container p {
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid black; */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #272727;
+    cursor: pointer;
+}
+
+.center-svg path {
+    fill: rgb(238, 240, 238);
+}
+
+
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    flex: 1;
+}
+
+.menu-container p:nth-child(2),
+.menu-container p:nth-child(4) {
+    margin-left: -20px;
+}
+
+.menu-container p:last-child {
+    width: 80px;
+    background-color: red;
+    border-radius: 50px;
+}
+
+
+.menu-container p:hover::after {
+    background-color: #272727;
+    padding: 5px;
+    /* border: 1px solid #ccc; */
+    border-radius: 5px;
+    position: absolute;
+    bottom: 140px;
+    z-index: 1;
+    color: #ccc;
+}
+
+.menu-container p:nth-child(1):hover::after {
+    content: 'Audio settings';
+}
+
+.menu-container p:nth-child(2):hover::after {
+    content: var(--hover-content);
+}
+
+.menu-container p:nth-child(3):hover::after {
+    content: 'Video settings';
+}
+
+.menu-container p:nth-child(4):hover::after {
+    content: var(--hover-content);
+}
+
+.menu-container p:nth-child(5):hover::after {
+    content: 'Turn on captions';
+}
+
+.menu-container p:nth-child(6):hover::after {
+    content: 'Send a reaction';
+}
+
+.menu-container p:nth-child(7):hover::after {
+    content: 'Present now';
+}
+
+.menu-container p:nth-child(8):hover::after {
+    content: 'Raise hand';
+}
+
+.menu-container p:nth-child(9):hover::after {
+    content: 'More options';
+}
+
+.menu-container p:nth-child(10):hover::after {
+    content: 'Leave call';
+}
+
+/* ---------------------------------- */
+.menu-container-right {
+    display: flex;
+    gap: 20px;
+    /* flex-basis: 50%; */
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    color: white;
+    font-size: 24px;
+}
+
+.notification-icon {
+    position: relative;
+}
+
+.notification {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #555;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 5px;
+    font-size: 12px;
+}
+
+
+/* AudioSettings.css */
+.audio-settings-container {
+    display: flex;
+    background-color: #2c2c2c;
+    padding: 10px;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 162px;
+    width: 540px;
+}
+
+.audio-setting {
+    display: flex;
+    align-items: center;
+    background-color: #3c3c3c;
+    border: 1px solid #5c5c5c;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin-right: 10px;
+    color: #d3d3d3;
+    flex: 1;
+    /* 使每个音频设置占据相同的空间 */
+}
+
+.audio-setting span {
+    margin: 0 5px;
+}
+
+.icon-microphone::before,
+.icon-speaker::before,
+.icon-dropdown::before,
+.icon-settings::before {
+    font-family: 'FontAwesome';
+    content: '\f130';
+    /* Default icon, replace with the actual icon code */
+}
+
+.icon-microphone::before {
+    content: '\f130';
+    /* Microphone icon */
+}
+
+.icon-speaker::before {
+    content: '\f028';
+    /* Speaker icon */
+}
+
+.icon-dropdown::before {
+    content: '\f078';
+    /* Dropdown icon */
+}
+
+.settings-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background-color: #3c3c3c;
+    border: 1px solid #5c5c5c;
+    border-radius: 50%;
+    color: #d3d3d3;
+}
+
+.right {
+    margin-left: auto;
+    /* 自动占据左侧空间，将元素推到最右边 */
+}
